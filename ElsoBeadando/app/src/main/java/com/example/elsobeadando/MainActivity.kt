@@ -21,7 +21,7 @@ import kotlin.math.roundToInt
 class MainActivity : AppCompatActivity(), SensorEventListener {
 
     lateinit var cube: ImageView
-    lateinit var textView: TextView
+    //lateinit var textView: TextView
     lateinit var sensorManager: SensorManager
     var width = 0f
     var height = 0f
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         println(height)
 
         cube = findViewById(R.id.im_cube)
-        textView = findViewById(R.id.textView)
+        //textView = findViewById(R.id.textView)
 
         setUpSensorStuff()
     }
@@ -73,14 +73,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             }
 
             //textView.text = "${cube.translationX}\n${sides}"
-
-            /*negyzet.apply {
-                rotationX = upDown * 3f
-                rotationY = sides * 3f
-                rotation = -sides
-                translationX = sides * -10
-                translationY = sides * 10
-            }*/
         }
     }
 
