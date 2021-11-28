@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     var width = 0f
     var height = 0f
 
+    val  picturePlusWidth = 20
+    val  picturePlusHeight = 50
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -64,11 +67,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             val sides = (event.values[0] * 100).toInt() / 100f
             val upDown = (event.values[1] * 100).toInt() / 100f
 
-            if(cube.translationX-sides < width+20 && cube.translationX-sides > 0-width-20){
+            if(cube.translationX-sides < width+picturePlusWidth && cube.translationX-sides > 0-width-picturePlusWidth){
                 cube.translationX -= sides
             }
 
-            if(cube.translationY+upDown < height+50 && cube.translationY+upDown > 0-height-50){
+            if(cube.translationY+upDown < height+picturePlusHeight && cube.translationY+upDown > 0-height-picturePlusHeight){
                 cube.translationY += upDown
             }
 
